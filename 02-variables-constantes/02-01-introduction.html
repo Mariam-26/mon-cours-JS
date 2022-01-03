@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Cours JS - II. o1. Variables</title>
+    
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Cours JS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Introduction
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="../01-introduction/01-01-introduction.html">Afficher et cacher l'heure</a></li>
+                            <li><a class="dropdown-item" href="../01-introduction/01-02-bouton.html">Actions avec un bouton</a></li>
+                            <li><a class="dropdown-item" href="../01-introduction/01-03-placement.html">Il se place où le JS ?</a></li>
+                            <li><a class="dropdown-item" href="../01-introduction/01-04-fichier-externe.html">un fichier externe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Variables et constantes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="02-01-introduction.html">Les variables</a></li>
+                            <li><a class="dropdown-item" href="02-02-afficher.html">Exemple de variables</a></li>
+                            <li><a class="dropdown-item" href="02-03-type.html">Les types de données</a></li>
+                            <li><a class="dropdown-item" href="02-04-operateurs.html">Les opérateurs arithmétiques</a></li>
+                            <li><a class="dropdown-item" href="02-05-concatenation.html">La concaténation</a></li>
+                            <li><a class="dropdown-item" href="02-06-constantes.html">Les constantes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="03-structures-controles/" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Structures de contrôles
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="04-fonctions/">Fonctions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="05-objet/">Objet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="06-selecteurs/">Sélecteurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="07-evenements/">Événements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="08-manipulations/">Manipulations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="09-dom/">DOM</a>
+                    </li>
+                </ul>
+                    <button class="btn btn-dark"><a href="00-exos/" class="text-white text-decoration-none">Exercices</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- mon en-tête -->
+    <header class="px-4 py-5 mb-5 text-center shadow">
+        <img class="d-block mx-auto mb-4" src="../img/JavaScript-logo.png" alt="logo JS" height="57">
+        <h1 class="display-5 fw-bold">Cours Javascript</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4"></p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+      <h3>1 - qu'est ce qu'une variable ?</h3>
+      <p>Une variable est 1 conteneur servant à stocker ds information de manière temporaire : comme du text (une chaîne de caractères), des nbres, ect. La variable varie ! Elle stock differentes variables au fil du temps./p>
+        <p>Une variable et sa valeur sont deux choses différentes. </p>
+
+        <h3>2 - Les règles de déclaration</h3>
+        <p>On, dit que l'on "déclare" une variable (comme en PHP). On va déclarer une variable grâce à ds mots clés.</p>
+
+        <h4>A- Les mots clés</h4>
+
+        <ul>
+          <li><code>let</code> : EXEMPLE <br>
+          <code>let age = 28;</code></li>
+
+          <li><code>var</code> : EXEMPLE <br>
+            <code>var couleur = jaune;</code></li>
+        </ul>
+
+        <h4>B - Quelque règles</h4>
+
+        <ul>
+          <li>Le nom d'une variable doit tjrs commencer pr une lettre ou un undercore</li>
+          <li>Le nom d'une variable ne doit pas contenir de caractères spéciaux</li>
+          <li>Il n'y a pas d'espace ds la déclaration d'une variable</li> </ul>
+
+          <h3>3 - Initialiser un variable</h3>
+          <p>Quand on sassigne une valeur à une variable vide, on dit que l'on stocke une valeur ou qu'on initialise une variable</p>
+
+          <h3>4 - Différences entre "var" et "let"</h3>
+          <p><code>let</code> est plus récent que <code>var</code>. Par défaut , ns utiliserons let <iframe width="560" height="315" src="https://www.youtube.com/embed/jYR_KOLGTgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+          <p>Avec <code>var</code>, ns ne sommes ps obligés de déclarer la variable avant de la Manipuler ou de la l'affecter</p>
+
+          <ul>
+            <li>Ceci fonctionne : <br> <code>nom = ouedraogo; <br>
+             var nom</code></li>
+
+             <li>Ceci ne fonctionne ps : <br>
+            <code>ville = `ouagadougou`; <br>
+            let ville;</code></li>
+          </ul>
+
+          <h4>B - La redéclaration ds variables</h4>
+          <p>Avec var, on avait la posiblité de déclarer une mm variable en utilisant à chaque fois var, ce qui avait pr effet de modifier la valeur stockées. on ne peut le faire avec let.</p>
+
+          <ul>
+            <li>Ceci fonctionne <br>
+            <code>var chien = `Max`; <br>
+            var chien = `Medor`;</code></li>
+            <li>Ceci ne fonctionne ps <br>
+            <code>let chat = `Mia`; <br>
+            let chat = `Mo`</code></li>
+          </ul>
+
+          <h4>C - La porté ds variables</h4>
+          <p>La portée d1nvariable désigne l'endroit pù cette variable va pouvoir être utilisée ds un script? Ns rentrerons plus ds ls détails lsque ns verrons les fonctions en JavaScript.</p>
+
+          <div class="alert alert-warning">
+            <h3 class="alert-heading">Conclusion</h3>
+            <p>La syntaxe de déclaration des variables avec let est la nouvelle syntax. <code>var</code>est vouée à disparaître . Vs devez donc normalement tjrs utiliser le cot clef <code>let</code>.</p>
+
+            <h3>5 - Utilité des variables</h3>
+            <p>Il sera pratique de stocker différents types de sonnées ou d'informations ds une variable.</p>
+            <p>Exemple : avec la fonction <code>prompt()</code>, on purra récuperer une donnée envoyée pr l'utilisateur et cette donnée sera stockée grâce à une variable.</p>
+
+            <h3>6 - Comment afficher le contenu d'une variable ?</h3>
+
+            <p>On va le voir ds la page suivante II - 02 - Exemples de variable</p>
+          </div>
+       
+    
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

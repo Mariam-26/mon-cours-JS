@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title> III -06 Précedence </title>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Cours JS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Introduction
+                        </a>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="../index.html">Cours JS</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarScroll">
+                                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Introduction
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                                <li><a class="dropdown-item" href="../01-introduction/01-01-introduction.html">Afficher et cacher l'heure</a></li>
+                                                <li><a class="dropdown-item" href="../01-introduction/01-02-bouton.html">Actions avec un bouton</a></li>
+                                                <li><a class="dropdown-item" href="../01-introduction/01-03-placement.html">Il se place où le JS ?</a></li>
+                                                <li><a class="dropdown-item" href="../01-introduction/01-04-fichier-externe.html">un fichier externe</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle active" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Variables et constantes
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                                <li><a class="dropdown-item" href="../02-variables-constantes/02-01-introduction.html">Les variables</a></li>
+                                                <li><a class="dropdown-item" href="../02-variables-constantes/02-02-afficher.html">Exemple de variables</a></li>
+                                                <li><a class="dropdown-item" href="../02-variables-constantes/02-03-type.html">Les types de données</a></li>
+                                                <li><a class="dropdown-item" href="../02-variables-constantes/02-04-operateurs.html">Les opérateurs arithmétiques</a></li>
+                                                <li><a class="dropdown-item" href="../02-variables-constantes/02-05-concatenation.html">La concaténation</a></li>
+                                                <li><a class="dropdown-item" href="../02-variables-constantes/02-06-constantes.html">Les constantes</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="03-structures-controles/" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Structures de contrôles
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                                <li><a class="dropdown-item" href="03-01-introduction.html">Introduction</a></li>
+                                                <li><a class="dropdown-item" href="03-02-if.html">If...</a></li>
+                                                <li><a class="dropdown-item" href="03-03-if-else.html">If ... else ...</a></li>
+                                                <li><a class="dropdown-item" href="03-04-if-elseif-else.html">If... else if ... else...</a></li>
+                                                <li><a class="dropdown-item" href="03-05-operateurs-logiques.html">Opérateurs logiques</a></li>
+                                                <li><a class="dropdown-item" href="03-06-precedence.html">La précédence</a></li>
+                                                <li><a class="dropdown-item" href="03-07-ternaire.html">Le ternaire</a></li>
+                                                <li><a class="dropdown-item" href="03-08-switch.html">Switch</a></li>
+                                                <li><a class="dropdown-item" href="03-09-boucles.html">Les boucles</a></li>
+                                                <li><a class="dropdown-item" href="03-10-for.html">For</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="04-fonctions/">Fonctions</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="05-objet/">Objet</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="06-selecteurs/">Sélecteurs</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="07-evenements/">Événements</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="08-manipulations/">Manipulations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="09-dom/">DOM</a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-dark"><a href="00-exos/" class="text-white text-decoration-none">Exercices</a></button>
+                                </div>
+                            </div>
+                        </nav>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="03-structures-controles/" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Structures de contrôles
+                        </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="04-fonctions/">Fonctions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="05-objet/">Objet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="06-selecteurs/">Sélecteurs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="07-evenements/">Événements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="08-manipulations/">Manipulations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="09-dom/">DOM</a>
+                        </li>
+                </ul>
+                <button class="btn btn-dark"><a href="00-exos/" class="text-white text-decoration-none">Exercices</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- mon en-tête -->
+    <div class="px-4 py-5 mb-5 text-center shadow">
+        <img class="d-block mx-auto mb-4" src="../img/JavaScript-logo.png" alt="logo JS" height="57">
+        <h1 class="display-5 fw-bold">Cours Javascript</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">06 La Precedence</p>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+
+        <h2>Les règnes de précedence</h2>
+
+        <p> <code>if (!(x &lt; = 2)){
+    <document class="getElementById">('p3').iinerHTML =' x contient une valeur strictement supérieure à2 '; <br> }</document>
+</code></p>
+
+        <p>Dans cette condition on utilise un deuxième couple de parenthèse pour être sûr que l'opérateur <code>!</code> porte bien sur le résultat de la comparaison <code>x &lt; = 2</code> et non pas seulement sur x , ce qui produirait un résultat différent.
+            On utilise donc les paraenthèses pour s'assurer que notre opérateur porte sur l'opérateur porte sur l'opérateur souhaitée.En fait, le JS va d'abord traiter tel opérateur puis tel autre.Et dans cet exemple , il traite donc ce qui est à droite
+            dans la parenthèse. </p>
+
+        <p> Cet ordre de priorité s'appelle "La précedence".En plus de cela, vous devez savoir que les opérateurs vont avoir différents sens d'associativité.l' associativité détermine l'ordre dans lequel des opérateurs de même précedence sont évalués et va
+            pouvoir se faire par la droite ou par la gauche .</p>
+
+        <p>Voici un tableau classant les différents opérateurs vus jusu'à présent (et quelques autres que nous allons voir bientôt) de la plus haute(0) 0 la plus basse (10) c'est à dire leur ordre de traitement par le Javascript.</p>
+
+        <table class="table table-striped">
+            <caption>Précédence</caption>
+            <thead>
+                <tr>
+                    <th>Précédence</th>
+                    <th>Opérateur (nom)</th>
+                    <th>Opérateur (symbole)</th>
+                    <th>Associativité</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>Groupement</td>
+                    <td>(...)</td>
+                    <td>Non applicable</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Post-incrémentation </td>
+                    <td>... ++</td>
+                    <td>Non applicable</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Post-décrémentation</td>
+                    <td>... —</td>
+                    <td>Non applicable</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>NON (logique)</td>
+                    <td>! ...</td>
+                    <td>Droite</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Pré-incrémentation</td>
+                    <td>++ ...</td>
+                    <td>Droite</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Pré-décrémentation</td>
+                    <td>- ...</td>
+                    <td>Droite</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Exponentiel</td>
+                    <td>... ** ...</td>
+                    <td>Droite</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Multiplication</td>
+                    <td>... * ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Division</td>
+                    <td>... / ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Modulo</td>
+                    <td>... % ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Addition</td>
+                    <td>... + ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Soustraction</td>
+                    <td>... - ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Inférieur strict</td>
+                    <td>...
+                        < ...</td>
+                            <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Inférieur ou égal</td>
+                    <td>...
+                        <=. ..</td>
+                            <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Supérieur stric</td>
+                    <td>... > ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Supérieur ou égal</td>
+                    <td>... >= ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Egalité (en valeur)</td>
+                    <td>... == ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Inégalité (en valeur)</td>
+                    <td>... != ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Egalité (en valeur et en type)</td>
+                    <td>... === ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Inégalité (valeur ou type)</td>
+                    <td>... !== ...</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>ET (logique)</td>
+                    <td>&&</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>OU (logique)</td>
+                    <td>||</td>
+                    <td>Gauche</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Ternaire</td>
+                    <td>... ? ... : ...</td>
+                    <td>Droite</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Affectation (simple ou combiné)</td>
+                    <td>... = ..., ... += ..., ...-=..., etc,</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <p>l'important ici est de se souvenir qu'il existe une précedence et des règles d'associativités lorquel'on utilise des opérateurs. En cas de doute il faut aller vérifier dans ce tableau l'ordre et le sens du traitement du JS. Dans tous les cas,
+            vous finirez par connaitre les règles principales de ce tableau à force de pratique.</p>
+
+        <ul>
+            <!-- li#v$*3 -->
+            <li id="v1" class="text-white bg-success"></li>
+            <li id="v2" class="text-white bg-success"></li>
+            <li id="v3" class="text-white bg-success"></li>
+        </ul>
+
+        <p id="p1" class="text-white bg-success"></p>
+
+        <p> En utisant la précedence, on sait que l'opérateur d'addition va être traité en premier puis ensuite ce sera le tour des opérateurs d'infériorité et de supériorité( strict ou égal ), puis celui du ET(&&)logique et enfin du OU (||)logique.</p>
+
+        <p>Premier Calcul <code> x> = 20 + y</code> 20 + -20 = 0. Dans ce cas là , x est bien supérieur ou égal à 0 . donc 15>=0 : <strong>TRUE</strong> <br> Deuxième calcul : <code>  x &lt; = 10 </code> DONC 15 &lt; = 10 : <strong> FALSE</strong> <br> Troisième
+            calcul : <code>y &lt; 0</code> DONC -20 &lt; 0 : <strong>TRUE</strong></p>
+
+        <P>L'opérateur ET (&&) va être traité ensuite.Pour que le ET (&&) fonctionne il faut que les deux blocs qui l'entoure soient TRUE or ici, la première opération renvoie TRUE et la seconde FALSE, ce bloc ne s'exécute donc pas . <br> on traite après
+            l'opérateur OU (||). Pour que cet opérateur renvoie TRUE il suffit qu'une seule des deux opérations renvoie TRUE .Dans ce cas là on a FALSE || TRUE. C'est finalement la valeur true qui est analysée et notre bloc de code s'exécute. </P>
+
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Mon JS -->
+    <script src="js/precedence.js"></script>
+</body>
+
+</html>

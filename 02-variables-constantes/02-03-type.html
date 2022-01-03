@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Cours JS les types de données</title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Cours-JS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="01-introduction/01-01-introduction.html"
+                                id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Introduction
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="01-introduction/01-01-introduction.html">Afficher et
+                                        cacher l'heure</a></li>
+                                <li><a class="dropdown-item" href="01-introduction/01-02-bouton.html">Action avec un
+                                        boutton</a></li>
+                                <li><a class="dropdown-item" href="01-introduction/01-03-placement.html">Il se place ou
+                                        le JS ?</a>
+                                </li>
+                                <li><a class="dropdown-item" href="01-introduction/01-04-fichier-externe.html">Un
+                                        fichier externe</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="02-01-introduction.html"
+                                id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Variables et constantes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="02-01-introduction.html">Introduction</a></li>
+                                <li><a class="dropdown-item " href="02-02-afficher.html">Afficher</a></li>
+                                <li><a class="dropdown-item active" href="02-03-type.html">type</a>
+                                </li>
+                                <li><a class="dropdown-item" href="02-04-operateurs.html">Opérateur</a>
+                                </li>
+                                <li><a class="dropdown-item" href="02-05-concatenation.html">Concatenation</a></li>
+                        </li>
+                        <li><a class="dropdown-item" href="02-06-constantes.html">Constantes</a>
+                        </li>
+                        </li>
+                    </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="03-structures-controles/" id="navbarScrollingDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            structure et controle
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="04-fonctions/">Fonctions</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="05-objet/">Objet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="06-selecteurs/">Sélécteurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="07-evenements/">evenements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="08-manipulation/">Manipulation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="09-dom/">DOM</a>
+                    </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- main -->
+
+    <div class="px-4 py-5 my-5 text-center shadow">
+        <img class="d-block mx-auto mb-4"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png"
+            alt="Logo- JavaScript" width="72" height="57">
+        <h1 class="display-5 fw-bold">Cours JavaScript</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">JavaScript : Les types de données</p>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <p> <b>Il existe 7 typees de données JavaScript</b></p>
+        <h2> <em>String</em> iu chaîne de caractère </h2>
+        <p>En JS, onn va utilisé indifféremment des guillements double ou des apostrophes pour entourer une chaine de
+            caractère. Ces méthodes seront strictement équivalentes, à la différence du PHP par exemple.</p>
+        <div class="alert alert-warning">
+            <p>Faîte attention cependant à un point, si votre chaîne de caractère contient un carractère qui est le même
+                que le lélimiteur choisi, il faudra échapper ce caractère grâce à un antislash (\) (Shift + option +
+                slash)</p>
+        </div>
+        <p id="p1" class="text-white bg-success"></p>
+        <p id="p2" class="text-white bg-success"></p>
+
+        <h2><em>Number</em></h2>
+        <p>Les Variables en JS vt également pouvoir stocker ds nbres entiers positifs ou négatitifs, ou à virgule (décimaux).</p>
+        <p id="p3" class="text-white bg-success"></p>
+
+        <h2>3 - <em>Booléen</em> ou Booléan</h2>
+        <p>Ce type de donnée sera utile pr vérifier si un test est vrais ou faux. Un booléen, en algèbre, est une valeur binaire (soit 0, soit 1)? En informatique, le type booléen est un type qui ne contient que deux valeurs : TRUE et FALSE</p>
+        <p id="p4" class="text-white bg-success"></p>
+
+        <h2>4 - <em>Null</em>ou vide</h2>
+        <p>Lorsque qu'une variable est laissée vide, elle affiche le type null : cela signifie qu'elle n'a pas de nontenu</p>
+
+        <h2>5 - <em>Undefined</em>ou indefinie</h2>
+        <p>Sinon déclare une variable ss lui attribuer de valeur alors son type sera Undefined.</p>
+
+        <h2>6/7 - <em>Symboles</em> et <em>objects</em></h2>
+        <p>Ls objects st ds structures complexes qui vont pouvoir stocker plusieurs valeurs en mm tps et que ns étudierons plus tard car il s'agit là d'un sujet complexe à appréhender pour un débutant.</p>
+        <p>Si o  déclare une variable et qu'on lui passe la valeur <code>null</code>alors son type sera <code>objects</code>.</p>
+
+
+    </div>
+
+
+    <!-- fin du code  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="js/type.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+consignes exo
+
+<ul>
+        <li>Créer un fichier 01-bonjour.html et faites le pointer vers un fichier 01-bonjour.js</li>
+        <li>Vous pouvez placer cet énoncé dans ce fichier</li>
+        <li>Écrire le code invitant à l'utilisateur à saisir d'abord son nom puis son prénom dans 2 boîtes de dialogue succéssives.</li>
+        <li>Afficher ensuite dans une autre boîte de dialogue le nom et le prénom de l'utilisateur.</li>
+        <li>Attention à bien respecter les espaces entre les morts dans le message final !</li>
+    </ul>
