@@ -8,9 +8,12 @@ document.getElementById('p2').innerHTML = Math.floor((Math.random() * 11)); /* I
 document.getElementById('p3').innerHTML = Math.random();
 
 // Fonction personnalisée
-
+/**
+ * Multiplication par 100
+ * @returns number
+ */
 function random() {
     return Math.random() * 100;
 }
 
-document.getElementById('p4').innerHTML = 'Le nombre généré  est ' + randomX100();
+document.getElementById('p4').innerHTML = `Le nombre généré  est ${randomX100()}`;
