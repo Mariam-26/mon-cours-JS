@@ -20,9 +20,9 @@ let nbUser2 = parseInt(prompt('Entrez un nombre !'));
 let nbMax2 = (nbUser2 + 10);
 while (nbUser2 <= nbMax2) {
     if (nbUser2 % 2 === 0) {
-        document.getElementById('p3').innerHTML += i + 'est pair. <br>'
+        document.getElementById('p3').innerHTML += nbUser2 + 'est pair. <br>'
     } else {
-        document.getElementById('p3').innerHTML += i + 'est impair. <br>'
+        document.getElementById('p3').innerHTML += nbUser2 + 'est impair. <br>'
     }
     nbUser2++;
 
