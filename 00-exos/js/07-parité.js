@@ -25,5 +25,4 @@ while (nbUser2 <= nbMax2) {
         document.getElementById('p3').innerHTML += nbUser2 + 'est impair. <br>'
     }
     nbUser2++;
-
 }

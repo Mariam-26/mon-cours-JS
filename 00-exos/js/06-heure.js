@@ -4,12 +4,12 @@ let seconde = parseInt(prompt(`Entrez les secondes`));
 
 // On affiche l'heure donnée par l'utilisateur
 
-document.getElementById('p1').innerHTML = `Il est actuellement ${heure} ${minute} ${seconde}`;
+document.getElementById('p1').innerHTML = `Il est actuellement ${heure}h ${minute}min ${seconde}sec.`;
 
 // On affiche l'heure + 1 seconde
 
-if ((heure >= 0) && (heure <= 23)
-    (minute >= 0) && (minute <= 59)
+if ((heure >= 0) && (heure <= 23) &&
+    (minute >= 0) && (minute <= 59) &&
     (seconde >= 0) && (seconde <= 59)) {
     seconde++;
     if (seconde === 60) {
@@ -23,7 +23,7 @@ if ((heure >= 0) && (heure <= 23)
             }
         }
     }
-    document.getElementById('p2').innerHTML = `Dans une seconde ul sera ${heure} h ${minute} min${seconde} sec`;
+    document.getElementById('p2').innerHTML = `Dans une seconde Il sera ${heure}h ${minute}min ${seconde}sec.`;
 } else {
-    document.getElementById('p2').innerHTML = `Il est faut rentrer une heure valise !`
+    document.getElementById('p2').innerHTML = `Il est faut rentrer une heure valide !`
 }
