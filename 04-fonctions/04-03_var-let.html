@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Cours JS IV. 01 - introduction</title>
+    <title>Cours JS IV. 04-03 VAR et LET </title>
 
 </head>
 
@@ -17,7 +17,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Les fontion en JS st incontournables</a>
+            <a class="navbar-brand" href="../index.html">Cours JS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -93,67 +93,31 @@
         <img class="d-block mx-auto mb-4" src="../img/JavaScript-logo.png" alt="logo JS" height="57">
         <h1 class="display-5 fw-bold">Cours Javascript</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Les Fonctions</p>
+            <p class="lead mb-4">La différence de portée entre var et let </p>
         </div>
     </div>
 
     <div class="container mb-5">
 
-        <h1>1 - Les fontion prédéfinies</h1>
-
-        <p>Une fonction est un bloc de codes, svt nomé, et réutilisable. Son but est déffectuer une âche précise. Les fonctionpossèdent de nombreux atouts.</p>
-
-        <h3>L'Exemple de <code>randon</code></h3>
-
-        <p>Il existe ds fonctions prédéfinies, telle que <code>random(</code>qui est une fontion mathématique. Ici on va l'utiliser pr génére un nombre aléatoir compris entre 0 et 100.</p>
-        <p id="p1" class="bg-success text-white"></p>
-
-        <p>Je génère un nombre compris ent 0 et 10</p>
-
-        <p id="p2" class="bg-success text-white"></p>
-
-        <p>Je génère un nbre decimal compris entre 0 et 1.</p>
-        <p id="p3" class="bg-success text-white"></p>
-
-        <h2>2 - Les fontions personnalisées</h2>
-        <p>Ici ns allons prendre une fonction prédéfinie et la personnaliser selon ce qu'on veut afficher : générer un nbre compris entre 0 et 100</p>
-        <p id="p4" class="bg-success text-white"></p>
-
-        <h3>Petits exercices</h3>
-        <p id="p5" class="bg-success text-white"></p>
-        <p id="p6" class="bg-success text-white"></p>
-        <p id="p7" class="bg-success text-white"></p>
-        <p id="p8" class="bg-success text-white"></p>
-        <p id="p9" class="bg-success text-white"></p>
-
-        <h2>3 - Recaptilutatif sur les fonctions</h2>
-
-        <p>Les fonctions st des blocs de codes nmmés et réutilisables et dont le but est d'effectuer une tâche précise</p>
-
-        <ul>
-            <li>Il existe 2 types de fonctions, les fonctions natives ou prédéfinies (ou des méthodes) que l'on aura qu'à appeler, les fonctions personnalisézq que l'on va créer.</li>
-            <li>Pour exécuter le code d'1 fonction il faut l'appeller. Pour cela, il suffit d'écrire son nom suivi de parenthèses, en y passant éventuellement des arguments.</li>
-            <li>On crée une fonction personnalisée grâce au mot-clef 'fonction :
-                <br>Si une fonction a besion qu'on lui passe des arguments pour fonctionner, alors on définira des paramètre lors de sa définition.
-                <br>Lors de son appel, on lui passera des arguments qui prendront la place des paramètres.
-            </li>
-        </ul>
+        <h2>Var et let </h2>
 
 
+        <p> Les variables déclarées grâce aux mots clefs <code>VAR </code> et <code>Let</code> ont des portées différentes. <code>Let</code> aura une portée de bloc et <code> VAR</code> aura une portée élargie</p>
 
-
-
+        <p>Exemples</p>
+        <!-- p#p$.text-white.bg-success -->
+        <p id="p1" class="text-white bg-success"></p>
+        <p id="p2" class="text-white bg-success"></p>
+        <p id="p3" class="text-white bg-success"></p>
+        <p id="p4" class="text-white bg-success"></p>
+        <p id="p5" class="text-white bg-success"></p>
 
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <!-- Mon JS -->
-
-    <script src="js/04-01_introduction.js"></script>
-
-
+    <script src="js/04-03_var-let.js"></script>
 </body>
 
 </html>
