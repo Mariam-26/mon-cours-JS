@@ -1,0 +1,5 @@
+Écrivez un programme js qui demande l'heure à un utilisateur sous la forme de trois informations (heures, minutes, secondes). Le programme affiche ensuite l'heure qu'il sera une seconde plus tard. Les erreurs de saisie doivent être gérées.
+
+Par exemple : 14h 17min 59sec => 14h 18min 0sec
+
+la page doit s'appeler 11-heuresuivante.html
