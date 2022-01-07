@@ -1,0 +1,9 @@
+for (let i = 1; i <= 10; i++) {
+    if(i % 2 === 0) {/* si le reste de la division est égal à 0 alors mon chiffre/nombre est pair */
+        document.getElementById('p1').innerHTML += i + " est pair. "
+    }else {
+        document.getElementById('p1').innerHTML += i + " est impair. "
+    }
+}
+
+// Faire le même exercice mais en demandant un nombre entier à l'utilisateur et en affichant les 10 au dessus  avec une for (p2) puis avec une while (p3)
