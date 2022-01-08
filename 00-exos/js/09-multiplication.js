@@ -9,13 +9,14 @@ for (let i = 1; i <= 10; i++) {
 
 let nbr2 = Number(prompt("Mutiplions un nombre"));
 
-for (let i = 11; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {
     let reponse2 = nbr2 * i;
     document.getElementById('p2').innerHTML += `${nbr2} X ${i} = ${reponse2}<br> `;
 
-
-
-
-
-    nbr + ' X ' + i + ' = ' + reponse + ' <br>';
 }
+
+document.getElementById('p3').innerHTML =
+
+
+
+    `${nbr}X${nbr2} = ${nbr * nbr2}`;
