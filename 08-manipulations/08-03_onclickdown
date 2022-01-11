@@ -11,6 +11,18 @@
 
     <title>Cours JS VII. 08-01_diapo</title>
 
+    <style>
+        #move {
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            border: 2px solid red;
+            line-height: 100;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -93,43 +105,16 @@
         <img class="d-block mx-auto mb-4" src="../img/JavaScript-logo.png" alt="logo JS" height="57">
         <h1 class="display-5 fw-bold">Cours Javascript</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Fabrication de diaporamas en JS</p>
+            <p class="lead mb-4">08 - 03 Le mot Keydown</p>
         </div>
     </div>
 
     <div class="container mb-5">
-        <h2>1 - Diapo 1</h2>
-        <section class="row">
-            <div class="col-6">
-                <h3>L'attribut <code>onclick</code></h3>
-                <p>Dans la balise <code>img</code>, je mets derectemnt l'attribut <code>onclick</code>. On oublie pas de mette la class 'image-fluid' pr que ntre st adapté à la taille de sa div parente.</p>
-            </div>
 
-            <div class="col-6">
-                <img src="img/1.jpg" alt="Photo defleur" class="img-fluid" onclick="this.src='img/3.jpg';this.alt='Photo de la plage'">
-            </div>
-        </section>
-
-        <h2> Diapo2</h2>
-        <div id="diaporama2">
-            <img src="img/2.jpg" alt="Photo de la nature" class="img-fluid" id="diapo2"><br>
-
-            <button class="btn btn-outline-warning" id="btnDiapo2">Changer d'image</button>
+        <h2>Keydown</h2>
+        <div>
+            <p id="move">move</p>
         </div>
-
-        <h2>3 - Diapo avec une fonction nommée</h2>
-        <div id="diaporama3">
-            <img src="img/3.jpg" alt="Photo de la plage" class="img-fluid" id="diapo3"><br>
-
-            <button class="btn btn-outline-warning" id="btnDiapo3">Changer d'image</button>
-        </div>
-
-        <h2>Un diaporama avec switch</h2>
-        <div id="diapo4">
-            <img src="img/1.jpg" alt="" class="img-fluid" id="diaporama4" onclick="tourneImages()">
-        </div>
-
-
     </div>
 
     <!-- Bootstrap JS -->
@@ -137,43 +122,27 @@
 
     <!-- Mon JS -->
 
-    <!-- <script src="js/08-01_diapo.js"></script> -->
+
 
     <script>
-        // Diapo 1 =>js directement sur l'élément
+        document.onkeydown = clavier;
 
-        // Diapo 2
-
-        document.querySelector('#btnDiapo2').addEventListener('click', function() {
-            document.getElementById('diapo2').src = 'img/3.jpg';
-            document.getElementById('diapo2').alt = 'Photo de la nature';
-        })
+        function clavier(e) {
+            let carre = document.getElementById('move');
+            if (e.keyCode == '38') {
+                carre.style.top = (carre.offsetTop - 5) + 'px';
 
 
-        // Diapo 3
-        // avec une fonction nommée
-        document.querySelector('#btnDiapo3').addEventListener('click', diapo3);
-
-        function diapo3() {
-            document.getElementById('diapo3').src = 'img/2.jpg';
-            document.getElementById('diapo3').alt = 'Photo de la plage';
-        }
-
-        // DIAPO 4
-        function tourneImages() {
-            let getImage = document.getElementById('diaporama4').getAttribute('src');
-            switch (getImage) {
-                case 'img/1.jpg':
-                    document.getElementById('diaporama4').src = 'img/2.jpg';
-                    break;
-            }
-            switch (getImage) {
-                case 'img/2.jpg':
-                    document.getElementById('diaporama4').src = 'img/3.jpg';
-                    break;
+            } else if (e.keyCode == '39') {
+                carre.style.left = (carre.offsetLeft + 5) + 'px';
+            } else if (e.keyCode == '40') {
+                carre.style.top = (carre.offsetTop + 5) + 'px';
+            } else if (e.keyCode == '37') {
+                carre.style.left = (carre.offsetLeft - 5 + 'px');
             }
         }
     </script>
+    <!-- Fin du script -->
 
 
 </body>

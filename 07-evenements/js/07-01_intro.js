@@ -59,7 +59,7 @@ maDivVerte.addEventListener('mouseout', function() {
 
 
 // La div rouge
-document.querySelector('#rouge').addEventListener('click, fdivrouge');
+document.querySelector('#rouge').addEventListener('click', fdivrouge);
 document.querySelector('#rouge').style.cursor = 'pointer';
 
 function fdivrouge() {

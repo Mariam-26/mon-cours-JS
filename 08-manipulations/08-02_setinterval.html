@@ -93,43 +93,32 @@
         <img class="d-block mx-auto mb-4" src="../img/JavaScript-logo.png" alt="logo JS" height="57">
         <h1 class="display-5 fw-bold">Cours Javascript</h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">Fabrication de diaporamas en JS</p>
+            <p class="lead mb-4">08 - 02 setinterval</p>
         </div>
     </div>
 
     <div class="container mb-5">
-        <h2>1 - Diapo 1</h2>
-        <section class="row">
-            <div class="col-6">
-                <h3>L'attribut <code>onclick</code></h3>
-                <p>Dans la balise <code>img</code>, je mets derectemnt l'attribut <code>onclick</code>. On oublie pas de mette la class 'image-fluid' pr que ntre st adapté à la taille de sa div parente.</p>
+
+        <h2>La fonction setinterval()</h2>
+        <div id="diaporama">
+            <img src="img/1.jpg" alt="" class="img-fluid" id="imgDiapo">
+        </div>
+    </div>
+
+    <h2>Un diaporama Bootstrap</h2>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/1.jpg" class="d-block w-100" alt="...">
             </div>
-
-            <div class="col-6">
-                <img src="img/1.jpg" alt="Photo defleur" class="img-fluid" onclick="this.src='img/3.jpg';this.alt='Photo de la plage'">
+            <div class="carousel-item">
+                <img src="img/2.jpg" class="d-block w-100" alt="">
             </div>
-        </section>
-
-        <h2> Diapo2</h2>
-        <div id="diaporama2">
-            <img src="img/2.jpg" alt="Photo de la nature" class="img-fluid" id="diapo2"><br>
-
-            <button class="btn btn-outline-warning" id="btnDiapo2">Changer d'image</button>
+            <div class="carousel-item">
+                <img src="img/3.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
-
-        <h2>3 - Diapo avec une fonction nommée</h2>
-        <div id="diaporama3">
-            <img src="img/3.jpg" alt="Photo de la plage" class="img-fluid" id="diapo3"><br>
-
-            <button class="btn btn-outline-warning" id="btnDiapo3">Changer d'image</button>
-        </div>
-
-        <h2>Un diaporama avec switch</h2>
-        <div id="diapo4">
-            <img src="img/1.jpg" alt="" class="img-fluid" id="diaporama4" onclick="tourneImages()">
-        </div>
-
-
     </div>
 
     <!-- Bootstrap JS -->
@@ -137,43 +126,36 @@
 
     <!-- Mon JS -->
 
-    <!-- <script src="js/08-01_diapo.js"></script> -->
+
 
     <script>
-        // Diapo 1 =>js directement sur l'élément
+        // Diapo avec setinterval
+        var varImg = 0 /* initialisation de la variable image */
 
-        // Diapo 2
+        console.log(typeof varImg, varImg);
 
-        document.querySelector('#btnDiapo2').addEventListener('click', function() {
-            document.getElementById('diapo2').src = 'img/3.jpg';
-            document.getElementById('diapo2').alt = 'Photo de la nature';
+        let timer = window.setInterval('monDiapo()', 3000); /* Initialisation de la variable timer avec appel de la fonction et temps en milisecondes(ici 3000 => 3s) */
+
+        function monDiapo() {
+            varImg += 1; /* affectation et incrementation */
+
+            imgDiapo.setAttribute('src', 'img/' + varImg + '.jpg');
+
+
+            if (varImg == 3) {
+                clearInterval(timer);
+            }
+        }
+
+
+        var myCarousel = document.querySelector('#myCarousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 10000,
+            /* Je definis l'interval à 10000 milisecondes c' */
+            wrap: false
         })
-
-
-        // Diapo 3
-        // avec une fonction nommée
-        document.querySelector('#btnDiapo3').addEventListener('click', diapo3);
-
-        function diapo3() {
-            document.getElementById('diapo3').src = 'img/2.jpg';
-            document.getElementById('diapo3').alt = 'Photo de la plage';
-        }
-
-        // DIAPO 4
-        function tourneImages() {
-            let getImage = document.getElementById('diaporama4').getAttribute('src');
-            switch (getImage) {
-                case 'img/1.jpg':
-                    document.getElementById('diaporama4').src = 'img/2.jpg';
-                    break;
-            }
-            switch (getImage) {
-                case 'img/2.jpg':
-                    document.getElementById('diaporama4').src = 'img/3.jpg';
-                    break;
-            }
-        }
     </script>
+    <!-- Fin du script -->
 
 
 </body>
