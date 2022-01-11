@@ -3,7 +3,7 @@
 // Diapo 2
 
 document.querySelector('#btnDiapo2').addEventListener('click', function() {
-    document.getElementById('diapo2').src = 'img/2.jpg';
+    document.getElementById('diapo2').src = 'img/3.jpg';
     document.getElementById('diapo2').alt = 'Photo de la nature';
 })
 
