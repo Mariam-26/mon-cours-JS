@@ -150,8 +150,8 @@
         var myCarousel = document.querySelector('#myCarousel')
         var carousel = new bootstrap.Carousel(myCarousel, {
             interval: 10000,
-            /* Je definis l'interval à 10000 milisecondes c' */
-            wrap: false
+            /* Je definis l'interval à 10000 milisecondes cad 10s */
+            wrap: false /* L'instruction wrap permet de definir si l'on veut que notre carousel reprenne à chaque fois dépuis la 1 image. Ici il est defini sur false, le carousel s'arretra donc à la fin du 1 passage */
         })
     </script>
     <!-- Fin du script -->
