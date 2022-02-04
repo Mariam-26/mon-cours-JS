@@ -21,7 +21,7 @@ document.getElementById('p4').innerHTML = `Le nombre généré  est ${randomX100
 // Exemple de fonction personnalisée  avec multiplier
 
 function multiplier(nbr1, nbr2) {
-    return ('Multiplications : ' + nbr1 + 'X' + nbr2 + '=' + (nbr1 * nbr2));
+    return (`Multiplications : ${nbr1}X${nbr2}=${nbr1 * nbr2}`);
 }
 
 document.querySelector('#p5').innerHTML = multiplier(20, 5);
@@ -54,7 +54,7 @@ function Modulo(nbr1, nbr2) {
     return ('Le modulo : ' + nbr1 + '%' + nbr2 + '=' + (nbr1 % nbr2));
 }
 
-document.querySelector('#p8').innerHTML = division(20, 5);
+document.querySelector('#p8').innerHTML = Modulo(20, 5);
 
 // Addition
 
